@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(thumb-1920-314302.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-seri;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.game-title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+.game-title:hover {
+    background-color: rgb(211, 222, 8);
+    border-radius: 40px;
+    transform: scale(0.75);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: rgb(207, 225, 6);
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: rgb(174, 183, 13);
+}
+
+.cell.o {
+    color: rgb(175, 177, 10);
+}
+
+.game-message {
+    display: none;
+    color: white;
+    padding: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.game-message.show {
+    display: block;
+}
+
+button{
+    padding: 14px 20px;
+    font-size: 30px;
+    border: none;
+    background-color: #3a42e1;
+    color:black;
+    font-family: sans-seri;
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(230, 230, 8);
+    transform: scale(1.00);
+}
+
+.cell.x::before {
+    content: 'X';
+    font-size: 33px;
+    color: black;
+}
+
+.cell.o::before {
+    content: 'O';
+    font-size: 33px;
+    color: black;
+}
